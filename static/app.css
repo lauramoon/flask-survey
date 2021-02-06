@@ -1,0 +1,25 @@
+body {
+    background-color: aquamarine;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.main-content {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.form-element {
+    margin: 5px;
+    font-size: large;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.flash {
+    background-color: rgb(128, 0, 128, 0.2);
+    border-radius: 5px;
+    border: 2px solid #707070;
+}

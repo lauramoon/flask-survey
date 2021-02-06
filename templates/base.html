@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+    <div class=main-content>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <section class='flash-messages'>
+                {% for msg in messages %}
+                <p class='flash'>{{msg}}</p>
+                {% endfor %}
+            </section>
+        {% endif %}
+        {% endwith %}
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
