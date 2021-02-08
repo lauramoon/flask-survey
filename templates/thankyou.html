@@ -7,5 +7,15 @@ Thank you
 {% block content %}
     <h1>Thank you!</h1>
     <p>Your responses have been recorded.</p>
-    <p>{{response}}</p>
+    <ul class="question-list">
+        {% for i in range(questions|length) %}
+        <li class="list-item">
+            <strong>{{questions[i].question}}</strong> 
+            {{session['response'][i]['choice']}}</li> 
+            {% if 'text' in session['response'][i] %}
+            <em>{{session['response'][i]['text']}}</em>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
 {% endblock %}

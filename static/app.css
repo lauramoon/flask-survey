@@ -6,7 +6,7 @@ body {
 }
 
 .main-content {
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
     text-align: center;
 }
@@ -22,4 +22,12 @@ body {
     background-color: rgb(128, 0, 128, 0.2);
     border-radius: 5px;
     border: 2px solid #707070;
+}
+
+.question-list {
+    text-align: left;
+}
+
+.list-item {
+    padding-top: 8px;
 }

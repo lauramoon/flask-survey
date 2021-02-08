@@ -5,7 +5,14 @@ Satisfaction Survey
 {% endblock%}
 
 {% block content %}
-    <h1>{{title}}</h1>
-    <p>{{instructions}}</p>
-    <a href="/questions/0"><button class='form-element'>Start</button></a>
+<h1>Pick a Survey</h1>
+<p>Please select a survey from the list</p>
+<form action="/survey_info" method="POST">
+    <select name="survey" id="survey_choice">
+        {% for key, value in surveys.items() %}
+        <option value="{{key}}">{{value.title}}</option>
+        {% endfor %}
+    </select>
+    <button class='form-element'>Start</button>
+</form>
 {% endblock %}
